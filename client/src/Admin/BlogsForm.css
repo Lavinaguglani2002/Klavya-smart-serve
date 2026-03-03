@@ -1,0 +1,125 @@
+Full Page Styling
+.blog-container {
+    min-height: 100vh; /* Full viewport height */
+    width: 100vw;
+    display: flex;
+    justify-content: center; /* Horizontal center */
+    align-items: center; /* Vertical center */
+    background: #f8f9fa; /* Light grey for clean look */
+    font-family: "Poppins", sans-serif;
+    padding: 40px 0;
+}
+
+/* Centered Blog Section */
+.blog-container .container {
+    width: 90%;
+    max-width: 1200px; /* More spacious */
+    background: #ffffff;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* Blog Form */
+.blog-container .card {
+    width: 100%; /* Equal width */
+    padding: 35px;
+    border: none;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.blog-container .card h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.blog-container .form-control {
+    border-radius: 10px;
+    padding: 14px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.blog-container .btn-primary {
+    background: #ff477e;
+    border: none;
+    padding: 14px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.blog-container .btn-primary:hover {
+    background: #ff2050;
+}
+
+/* Blog Images (Equal to Form) */
+.blog-container .blog-images {
+    width: 70%; /* Equal width */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between images */
+    align-items: center;
+}
+
+.blog-container .blog-image {
+    width: 100%;
+    max-width: 480px; /* Bigger images */
+    border-radius: 12px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 998px) {
+    .blog-container .container {
+        flex-direction: column;
+        width: 100%;
+        padding: 40px;
+        gap: 30px;
+    }
+
+    .blog-container .card,
+    .blog-container .blog-images {
+        width: 100%;
+    }
+
+    .blog-container .blog-image {
+        max-width: 400px;
+    }
+}
+
+.blog-container {
+    max-width: 90%;
+    margin: auto;
+  }
+  
+  .card {
+    border-radius: 10px;
+  }
+  
+  .blog-image {
+    max-height: 250px;
+    object-fit: cover;
+    width: 100%;
+  }
+  
+  @media (max-width: 768px) {
+    .blog-container {
+      max-width: 100%;
+    }
+    .blog-image {
+      max-height: 200px;
+    }
+  }
+  

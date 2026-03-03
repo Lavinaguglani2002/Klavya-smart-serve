@@ -1,0 +1,93 @@
+/* Custom Navbar Styling */
+.custom-navbar {
+    background-color: #000;
+    padding: 10px;
+  }
+  
+  .custom-navbar .navbar-brand {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .custom-navbar .logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .custom-navbar .nav-link {
+    color: white !important;
+    font-size: 1rem;
+    margin: 0 10px;
+    transition: color 0.3s;
+  }
+  
+  .custom-navbar .nav-link:hover {
+    color: #ffcc00 !important;
+  }
+  
+  .custom-navbar .icon {
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* Custom Footer Styling */
+  .custom-footer {
+    background-color: #222;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+  }
+  
+  .custom-footer a {
+    color: #ffcc00;
+    text-decoration: none;
+  }
+  
+  .custom-footer a:hover {
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    .custom-navbar .navbar-nav {
+      text-align: center;
+    }
+  
+    .custom-navbar .nav-item {
+      margin-bottom: 10px;
+    }
+  }
+  .user-circle {
+    width: 35px;
+    height: 35px;
+    background-color: #007bff; /* Blue color */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+  .cart-icon-container {
+    position: relative; /* Needed for positioning the badge */
+  }
+  
+  .cart-count-badge {
+    position: absolute;
+    top: -5px; /* Adjust this to move it higher or lower */
+    right: -5px; /* Adjust this to move it left or right */
+    background-color: #f00; /* Red background for the badge */
+    color: white;
+    font-size: 12px; /* Adjust the size of the text */
+    border-radius: 50%;
+    width: 20px; /* Size of the badge */
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  

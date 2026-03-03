@@ -1,0 +1,126 @@
+.admin-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f4f7f8;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .sidebar {
+    width: 260px;
+    background: #1c1e21;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  
+  .sidebar-header h4 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: #ffc107;
+  }
+  
+  .nav-links li {
+    list-style: none;
+    margin-bottom: 15px;
+  }
+  
+  .nav-links li a,
+  .nav-links li span {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    border-radius: 8px;
+    transition: all 0.3s;
+  }
+  
+  .nav-links li a:hover,
+  .nav-links li span:hover {
+    background-color: #343a40;
+    transform: translateX(5px);
+  }
+  
+  .dropdown-content {
+    display: none;
+    padding-left: 10px;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .sidebar-footer {
+    text-align: center;
+    padding-top: 30px;
+  }
+  
+  .sidebar-footer img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #ffc107;
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+  }
+  
+  .sidebar-footer img:hover {
+    transform: scale(1.1);
+  }
+  
+  .sidebar-footer p {
+    margin: 5px 0;
+    font-weight: 500;
+  }
+  
+  .sidebar-footer button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .sidebar-footer button:hover {
+    background-color: #bb2d3b;
+  }
+  
+  .content-area {
+    flex-grow: 1;
+    padding: 40px 30px;
+    background-color: #fff;
+    border-radius: 20px;
+    margin: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  }
+  /* Sidebar hover effects */
+.sidebar a:hover, .sidebar .dropdown-item:hover {
+    background-color: #495057;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  /* Dropdown hover effect */
+  .dropdown-menu .dropdown-item:hover {
+    background-color: #495057;
+    color: white;
+  }
+  
+  /* Active Link Style */
+  .sidebar .active {
+    background-color: #007bff;
+    color: white;
+  }
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+  }
+  
