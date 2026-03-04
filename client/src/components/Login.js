@@ -15,7 +15,7 @@ const Login = () => {
     const user = localStorage.getItem("USER");
     if (user) navigate("/");
     generateCaptcha();
-  }, []);
+  }, [navigate]);
 
   const generateCaptcha = () => {
     const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789#$&";

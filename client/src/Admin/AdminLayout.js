@@ -16,25 +16,44 @@ const AdminLayout = () => {
   const defaultphoto =
     "https://png.pngatree.com/png-vector/20231019/ourmid/pngtree-user-profile-avatar-png-image_10211467.png";
 
+  // useEffect(() => {
+  //   if (!localStorage.getItem("Name")) {
+  //     navigate("/login");
+  //   }
+
+  //   const name = localStorage.getItem("Name");
+  //   const role = localStorage.getItem("Role");
+  //   setItem({ name });
+
+  //   if (role === "admin") {
+  //     navigate("/dashboard");
+  //   } else if (role === "user") {
+  //     navigate("/userdashboard");
+  //   }
+
+  //   if (localStorage.getItem("EMAIL") && localStorage.getItem("TOKEN")) {
+  //     getProfilePic();
+  //   }
+  // }, []);
   useEffect(() => {
-    if (!localStorage.getItem("Name")) {
-      navigate("/login");
-    }
+  if (!localStorage.getItem("Name")) {
+    navigate("/login");
+  }
 
-    const name = localStorage.getItem("Name");
-    const role = localStorage.getItem("Role");
-    setItem({ name });
+  const name = localStorage.getItem("Name");
+  const role = localStorage.getItem("Role");
+  setItem({ name });
 
-    if (role === "admin") {
-      navigate("/dashboard");
-    } else if (role === "user") {
-      navigate("/userdashboard");
-    }
+  if (role === "admin") {
+    navigate("/dashboard");
+  } else if (role === "user") {
+    navigate("/userdashboard");
+  }
 
-    if (localStorage.getItem("EMAIL") && localStorage.getItem("TOKEN")) {
-      getProfilePic();
-    }
-  }, []);
+  if (localStorage.getItem("EMAIL") && localStorage.getItem("TOKEN")) {
+    getProfilePic();
+  }
+}, [navigate]);  // 👈 yaha navigate add karna hai
 
   const getProfilePic = async () => {
     const email = localStorage.getItem("EMAIL");
@@ -82,7 +101,7 @@ const AdminLayout = () => {
           color: "white",
           padding: "20px",
         }}
-      >
+      > 
         <h4 className="mb-4">Admin Panel</h4>
 
         <Link to="/" className="d-flex align-items-center text-white mb-3">
