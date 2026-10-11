@@ -1,126 +1,253 @@
-.admin-container {
-    display: flex;
-    min-height: 100vh;
-    background-color: #f4f7f8;
-    font-family: 'Segoe UI', sans-serif;
-  }
-  
+
+
+
+
+
+   .admin-layout {
+  min-height: 100vh;
+  background: #f4f7fc;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex-shrink: 0;
+  width: 260px !important;
+  padding: 26px 18px !important;
+  color: #fff;
+  background: linear-gradient(180deg, #171b35 0%, #222747 55%, #292c50 100%) !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 5px 0 25px rgba(22, 28, 60, 0.08);
+}
+
+/* Sidebar scrollbar */
+.sidebar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #626b96;
+  border-radius: 10px;
+}
+
+.sidebar h4 {
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  padding: 10px 8px 22px;
+  margin-bottom: 18px !important;
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* ===== Sidebar Links ===== */
+.sidebar a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #dce3ff !important;
+  text-decoration: none !important;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 11px 12px;
+  margin-bottom: 5px;
+  border-radius: 9px;
+  transition: background 0.25s ease, color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.sidebar a:hover {
+  color: #ffffff !important;
+  background: rgba(129, 140, 248, 0.18);
+  transform: translateX(3px);
+}
+
+/* ===== Sidebar Menu Headings ===== */
+.sidebar > div.mb-3 > div:first-child {
+  padding: 12px 11px;
+  border-radius: 9px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  transition: background 0.2s ease;
+}
+
+.sidebar > div.mb-3 > div:first-child:hover {
+  background: rgba(255, 255, 255, 0.09);
+}
+
+/* Nested links */
+.sidebar .ms-3 {
+  margin-left: 10px !important;
+  padding-left: 10px;
+  border-left: 2px solid rgba(129, 140, 248, 0.45);
+}
+
+.sidebar .ms-3 a {
+  font-size: 13px;
+  padding: 10px;
+}
+
+/* Active page */
+.sidebar a.fw-bold {
+  color: #ffffff !important;
+  background: linear-gradient(100deg, #6558e8, #4776e6);
+  box-shadow: 0 4px 12px rgba(83, 91, 211, 0.25);
+}
+
+/* ===== Horizontal Divider ===== */
+.sidebar hr {
+  margin: 25px 0;
+  border-color: rgba(255, 255, 255, 0.18);
+  opacity: 1;
+}
+
+/* ===== Admin Dropdown ===== */
+.sidebar .dropdown > button {
+  padding: 12px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.sidebar .dropdown > button:hover,
+.sidebar .dropdown > button:focus {
+  background: rgba(129, 140, 248, 0.3);
+}
+
+.sidebar .dropdown-menu {
+  width: 100%;
+  border: none;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+/* ===== Main Content ===== */
+.admin-layout main {
+  flex: 1;
+  min-width: 0;
+  padding: 30px !important;
+  background: #f5f7fc !important;
+}
+
+/* Dashboard heading */
+.admin-layout main h1,
+.admin-layout main h2 {
+  color: #202747;
+  font-weight: 750;
+  letter-spacing: -0.5px;
+}
+
+/* Cards */
+.admin-layout main .card {
+  border: 1px solid #edf0f7;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(35, 45, 90, 0.06) !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.admin-layout main .card:hover {
+  box-shadow: 0 10px 28px rgba(35, 45, 90, 0.11) !important;
+}
+
+/* Buttons */
+.admin-layout main .btn {
+  border-radius: 9px;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.admin-layout main .btn:hover {
+  transform: translateY(-1px);
+}
+
+/* Form fields */
+.admin-layout main .form-control,
+.admin-layout main .form-select {
+  min-height: 44px;
+  border: 1px solid #dce2ef;
+  border-radius: 9px;
+  background-color: #ffffff;
+}
+
+.admin-layout main .form-control:focus,
+.admin-layout main .form-select:focus {
+  border-color: #7770ed;
+  box-shadow: 0 0 0 3px rgba(119, 112, 237, 0.13);
+}
+
+/* Tables */
+.admin-layout main .table {
+  vertical-align: middle;
+}
+
+.admin-layout main .table thead th {
+  padding: 14px;
+  background: #eef1fa;
+  color: #343c60;
+  border-bottom: none;
+  font-size: 13px;
+}
+
+.admin-layout main .table tbody td {
+  padding: 13px 14px;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
   .sidebar {
-    width: 260px;
-    background: #1c1e21;
-    color: white;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    width: 215px !important;
+    padding: 18px 12px !important;
   }
-  
-  .sidebar-header h4 {
-    text-align: center;
-    margin-bottom: 30px;
-    font-weight: bold;
-    color: #ffc107;
+
+  .sidebar h4 {
+    font-size: 21px;
   }
-  
-  .nav-links li {
-    list-style: none;
-    margin-bottom: 15px;
+
+  .admin-layout main {
+    padding: 16px !important;
   }
-  
-  .nav-links li a,
-  .nav-links li span {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-    display: block;
-    border-radius: 8px;
-    transition: all 0.3s;
+
+  .sidebar a {
+    font-size: 13px;
   }
-  
-  .nav-links li a:hover,
-  .nav-links li span:hover {
-    background-color: #343a40;
-    transform: translateX(5px);
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 175px !important;
+    padding: 12px 8px !important;
   }
-  
-  .dropdown-content {
-    display: none;
-    padding-left: 10px;
+
+  .sidebar h4 {
+    font-size: 18px;
+    padding-left: 4px;
   }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
+
+  .sidebar > div.mb-3 > div:first-child {
+    font-size: 13px;
+    padding: 10px 6px;
   }
-  
-  .sidebar-footer {
-    text-align: center;
-    padding-top: 30px;
+
+  .sidebar .ms-3 {
+    margin-left: 4px !important;
+    padding-left: 5px;
   }
-  
-  .sidebar-footer img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    border: 2px solid #ffc107;
-    margin-bottom: 10px;
-    transition: transform 0.3s;
+
+  .sidebar .ms-3 a {
+    font-size: 11px;
+    padding: 8px 5px;
   }
-  
-  .sidebar-footer img:hover {
-    transform: scale(1.1);
+
+  .admin-layout main {
+    padding: 12px !important;
   }
-  
-  .sidebar-footer p {
-    margin: 5px 0;
-    font-weight: 500;
-  }
-  
-  .sidebar-footer button {
-    background-color: #dc3545;
-    color: white;
-    border: none;
-    padding: 8px 18px;
-    border-radius: 20px;
-    margin-top: 10px;
-    cursor: pointer;
-    transition: 0.3s ease;
-  }
-  
-  .sidebar-footer button:hover {
-    background-color: #bb2d3b;
-  }
-  
-  .content-area {
-    flex-grow: 1;
-    padding: 40px 30px;
-    background-color: #fff;
-    border-radius: 20px;
-    margin: 20px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
-  }
-  /* Sidebar hover effects */
-.sidebar a:hover, .sidebar .dropdown-item:hover {
-    background-color: #495057;
-    color: white;
-    border-radius: 5px;
-  }
-  
-  /* Dropdown hover effect */
-  .dropdown-menu .dropdown-item:hover {
-    background-color: #495057;
-    color: white;
-  }
-  
-  /* Active Link Style */
-  .sidebar .active {
-    background-color: #007bff;
-    color: white;
-  }
-  .dropdown-menu {
-    position: absolute;
-    top: 100%;
-    right: 0;
-  }
-  
+}
